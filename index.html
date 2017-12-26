@@ -1,0 +1,153 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Word Jumble</title>
+<!--        <link rel="stylesheet" href="styles/normalize.css" type="text/css">-->
+<!--        <link rel="stylesheet" href="styles/jquery.mobile-1.4.5.min.css" type="text/css">-->
+        <link rel="stylesheet" href="styles/styles.css" type="text/css">
+
+        <meta name="Word Jumble Game" content="Descramble the scrambled word">
+        <!--[if IE]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+<!--        <h1>The Word Jumble!</h1>-->
+
+        <div id="container">
+
+            <h1 id="gameTitle">Word Games!</h1>
+<!--            <h3>Word Jumble!</h3>-->
+
+            <div id="content_container">
+                
+                <section id="gameMenu">
+                	<button type="button" id="gameWordJumble">Word Jumble</button>
+                    <button type="button" id="gameMissingVowels">Missing Vowels</button>
+                    <button type="button" id="gameMissingLetters">Missing Letters</button>
+                </section>
+                
+
+                <section id="startMenu">
+                    <button type="button" id="new_game">New Game</button>
+                    <button type="button" id="instructions_button">Instructions</button>
+                    <!-- <button type="button" id="high_scores">High Scores</button>-->
+                    <input type="button" class="back_button" value="&lt;&lt;&lt;"/>
+                </section>
+                
+                <section id="instructions">
+                   <div id="wordJumbleInstructions">
+						<p>Here is the classic word jumble game, where you, the user, will be presented with a random scrambled word. You will then have either 20/30/40 seconds to try and guess the correct word, depending on the level difficulty you choose. If you fail to unscramble the word in the time given, the game is over. You will get 10 points for each word you successfully unscramble. For every 10 words you get right, you will move on to the next level.
+						<br>
+						BEWARE! The higher the level the harder it gets, as the words grow in length. LEVEL KEY BELOW...
+						<br><br>
+						<!--VERY EASY: 
+						<br>-->
+						EASY:
+						<br> 
+						NORMAL: 
+						<br>
+						HARD:
+						<br>
+						VERY HARD: 
+						<br>
+
+						<!-- (Hints cost 10 points, and you will not receive points for guessed word, when given hint.)-->
+	<!--                    DO YOU HAVE WHAT IT TAKES PUNY HUMAN?-->
+						</p>
+                   </div>
+                   
+                   <div id="missingVowelsInstructions">
+                   	
+                   </div>
+                    
+                   <div id="missingLettersInstructions">
+                   	
+                   </div>
+					
+                   <button type="button" class="back_button">&lt;&lt;&lt;</button>
+
+                </section>
+
+                <section id="content">
+
+                    <div id="difficulty_content">
+                        
+                        <input type="radio" value="easy" name="level" id="easy">
+                        <label for="easy" id="easy_label">Easy</label>
+                        <input type="radio" value="normal" name="level" id="normal">     
+                        <label for="normal" id="normal_label">Normal</label>
+                        
+                        <!-- Future Version with Hard and Very Hard Levels -->
+                        <!--<input type="radio" value="hard" name="level" id="hard">
+                        <label for="hard" id="hard_label">Hard</label>
+						
+                        <input type="radio" value="veryHard" name="level" id="veryHard">
+                        <label for="veryHard" id="veryHard_label">Very Hard</label>-->
+<!--                        <hr>-->
+                        <br>
+                        <p id="difficulty_ERROR"><strong>PLEASE CHOOSE A DIFFICULTY LEVEL!!</strong></p>
+                        <button type="button" id="start_game">Start Game</button>
+                        <button type="button" class="back_button">&lt;&lt;&lt;</button>
+                    </div>
+
+<!--                    <br>-->
+
+                    <div id="guessed_content">
+                        <p id="jumble_info">The jumbled word is:</p>
+                        <p id="jumbled_word"></p>
+                        <input type="text" placeholder=" Your guess!" id="user_guess" name="guess">
+                        <button type="button" name="guess" id="guess">Submit</button>
+                        
+                        <p id="timer">:30</p>
+                        
+                        
+                        
+                        <button type="button" id="quit">Quit!</button>
+                        
+                        <div id="level_and_points">
+<!--                            <label for="current_level"></label>-->
+                            <p id="current_level">LEVEL: 1</p>
+<!--                            <label for="user_points"></label>-->
+                            <p id="user_points">POINTS: 0</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <div id="game_over">
+                            <p>Would you like to play again?</p>
+                            <button type="button" id="yes">YES</button>
+                            <button type="button" id="no">NO</button>
+                    </div>
+
+                </section>
+
+<!--                <div class="clear"></div>-->
+
+            </div> <!--#content-container-->
+
+        </div> <!--#container-->
+
+
+        <!-- Load the CDN of jQueryfirst -->
+        <script
+          src="https://code.jquery.com/jquery-2.1.4.min.js"
+          integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
+          crossorigin="anonymous"></script>
+
+        <!-- If CDN fails to load, serve up the local jQuery -->
+        <script type="text/javascript">
+            window.jQuery || document.write('<script src="scripts/jquery-3.2.1.js"></script');
+        </script>
+
+        <!-- jQuery Mobile Script -->
+<!--        <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>-->
+
+        <script type="text/javascript" src="scripts/script.js"></script>
+    </body>
+
+</html>
